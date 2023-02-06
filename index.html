@@ -8,7 +8,25 @@
     <!-- Emmanuel -->
 <!--     <script data-id="intertel" data-customer="3Kqr5zrr80VY3asnLbCo9BiGjplQA" src="https://staging.intertel.mx/webchat/webchat.min.js"></script> -->
     <!--  Produccion    -->
-    <script data-id="intertel" data-customer="sEsCkDGgw5fUfnDgP3M4GG1ilc" src="https://conversa.intertel.mx/webchat/webchat.min.js"></script>
+<!--     <script data-id="intertel" data-customer="sEsCkDGgw5fUfnDgP3M4GG1ilc" src="https://conversa.intertel.mx/webchat/webchat.min.js"></script> -->
+<!--  Test    -->
+    <script>
+      (function(d,t) {
+        var BASE_URL="https://staging.intertelconversa.com";
+        var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=BASE_URL+"/packs/js/sdk.js";
+        g.defer = true;
+        g.async = true;
+        s.parentNode.insertBefore(g,s);
+        g.onload=function(){
+          window.conversaSDK.run({
+            websiteToken: 'X5tNsvftQe6GhB6pgo5CZAoi',
+            baseUrl: BASE_URL
+          })
+        }
+      })(document,"script");
+    </script>
+    
     <h1>Hola</h1>
     <p>Mundo</p>
     <button onclick="prueba()">Dale click</button>
